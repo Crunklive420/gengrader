@@ -1,0 +1,161 @@
+/* GenGrader — the grading lab.
+   Tokens: lab-paper #F7F8F5 · ink #171D2B · red pen #C8362B · highlighter #FFD84D · graphite #6A7180 · rule #DDE1DA
+   Type: Archivo Black (display) · Public Sans (body) · IBM Plex Mono (grades/data) */
+
+:root {
+  --paper: #F7F8F5;
+  --ink: #171D2B;
+  --pen: #C8362B;
+  --highlight: #FFD84D;
+  --graphite: #6A7180;
+  --rule: #DDE1DA;
+  --card: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.sheet { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+/* ---- Header ---- */
+header {
+  border-bottom: 3px solid var(--ink);
+  background: var(--paper);
+}
+.masthead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; padding: 22px 0 14px;
+}
+.wordmark {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.7rem; letter-spacing: -0.5px; text-decoration: none; color: var(--ink);
+}
+.wordmark .grader { color: var(--pen); }
+nav a {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.85rem;
+  color: var(--ink); text-decoration: none; margin-left: 18px;
+  border-bottom: 2px solid transparent; padding-bottom: 2px;
+}
+nav a:hover, nav a:focus-visible { border-bottom-color: var(--pen); }
+nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* ---- The signature: rubber-stamp grade ---- */
+.stamp {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: "IBM Plex Mono", monospace; font-weight: 700;
+  color: var(--pen);
+  border: 3px double var(--pen); border-radius: 8px;
+  transform: rotate(-6deg);
+  padding: 0.1em 0.35em; line-height: 1;
+  letter-spacing: 1px;
+  user-select: none;
+}
+.stamp-xl { font-size: 4.2rem; padding: 0.15em 0.3em; }
+.stamp-md { font-size: 1.6rem; }
+.stamp-sm { font-size: 1.05rem; transform: rotate(-4deg); }
+.stamp-pending { color: var(--graphite); border-color: var(--graphite); }
+
+/* red-pen underline for key phrases */
+.penline {
+  background-image: linear-gradient(104deg, transparent 0.5%, var(--pen) 1%, var(--pen) 99%, transparent 99.5%);
+  background-repeat: no-repeat; background-size: 100% 4px; background-position: 0 96%;
+  padding-bottom: 3px;
+}
+.hl { background: var(--highlight); padding: 0 4px; }
+
+/* ---- Hero ---- */
+.hero { padding: 56px 0 40px; display: flex; gap: 34px; align-items: center; flex-wrap: wrap; }
+.hero h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.08; letter-spacing: -1px; max-width: 620px;
+}
+.hero p.lede { margin-top: 18px; font-size: 1.12rem; max-width: 560px; color: var(--ink); }
+.hero .stampwrap { flex: 0 0 auto; }
+
+/* ---- Sections ---- */
+section { padding: 34px 0; }
+.rulebar { border: 0; border-top: 1px solid var(--rule); }
+h2 {
+  font-family: "Archivo Black", sans-serif; font-size: 1.5rem;
+  letter-spacing: -0.3px; margin-bottom: 16px;
+}
+h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+  text-transform: uppercase; letter-spacing: 2px; color: var(--pen); display: block; margin-bottom: 6px;
+}
+p + p { margin-top: 12px; }
+a { color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; }
+
+/* ---- Model cards (scoreboard) ---- */
+.board { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.model-card {
+  background: var(--card); border: 1.5px solid var(--ink); border-radius: 10px;
+  padding: 22px; position: relative; display: block; text-decoration: none; color: var(--ink);
+  transition: transform 120ms ease;
+}
+.model-card:hover { transform: translateY(-2px); }
+.model-card .who { font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; color: var(--graphite); }
+.model-card h3 { margin: 4px 0 10px; font-family: "Archivo Black", sans-serif; font-size: 1.2rem; }
+.model-card .stamp { position: absolute; top: 14px; right: 14px; }
+.model-card .verdict { font-size: 0.95rem; }
+
+/* ---- Scorecard table ---- */
+.scorecard {
+  width: 100%; border-collapse: collapse; margin: 18px 0;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.92rem;
+}
+.scorecard th, .scorecard td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--rule); }
+.scorecard th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--graphite); }
+.scorecard td.grade { font-weight: 700; color: var(--pen); font-size: 1.05rem; }
+
+/* ---- Contact-sheet gallery ---- */
+.contact-sheet {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px; margin-top: 16px;
+}
+.contact-sheet a { display: block; text-decoration: none; color: var(--ink); }
+.contact-sheet img {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  border: 1.5px solid var(--ink); border-radius: 6px; background: var(--rule);
+}
+.contact-sheet figcaption {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--graphite); padding-top: 4px;
+}
+.sheet-note { font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; color: var(--graphite); margin-top: 10px; }
+
+/* ---- CTA ---- */
+.cta {
+  display: inline-block; background: var(--ink); color: var(--paper);
+  font-family: "IBM Plex Mono", monospace; font-size: 0.95rem;
+  text-decoration: none; padding: 13px 22px; border-radius: 8px; margin-top: 18px;
+}
+.cta:hover { background: var(--pen); }
+.cta-row { margin-top: 8px; }
+
+/* ---- Footer ---- */
+footer {
+  border-top: 3px solid var(--ink); margin-top: 50px; padding: 26px 0 40px;
+  font-size: 0.88rem; color: var(--graphite);
+}
+footer .disclosure { font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; }
+footer a { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .hero { padding: 36px 0 24px; gap: 20px; }
+  .stamp-xl { font-size: 3rem; }
+  nav a { margin-left: 12px; font-size: 0.8rem; }
+}
