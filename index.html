@@ -182,9 +182,10 @@ footer{background:var(--char);color:#c9ccd2;padding:40px 22px 26px;border-top:4p
 <div class="hero dots">
 <h2>Every AI image generator,<br>graded in <span class="r">dated studies.</span></h2>
 <p class="sub">Standardized prompt suites. Published evidence. Score-ring grades you can verify yourself. No sponsored rankings, ever.</p>
-<div class="ctas">
+<div class="ctas" style="flex-direction:column;align-items:center;gap:10px">
 <a class="btn btn-red" href="#study">VIEW CURRENT STUDY <span class="arr">&rsaquo;</span></a>
-<a class="btn btn-line" href="#methodology">HOW WE GRADE</a>
+<a class="btn btn-line" href="#archive" style="padding:9px 18px;font-size:12.5px">ARCHIVED STUDIES</a>
+<a class="btn" href="#methodology" style="padding:6px 12px;font-size:11.5px;color:#7a7e86;font-weight:700">How we grade</a>
 </div>
 <div class="checkrow">
 <span><svg viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="7" fill="#c0281f"/><path d="M4 7.5 L6.5 10 L11 5" stroke="#fff" stroke-width="1.8" fill="none"/></svg>Same suite, every model</span>
@@ -200,12 +201,12 @@ footer{background:var(--char);color:#c9ccd2;padding:40px 22px 26px;border-top:4p
 <section id="study" style="padding-top:64px">
 <div class="sechead">
 <span class="kicker">Now Grading</span>
-<h3>Study 002 &middot; The Funny Suite</h3>
+<h3>GenGrade 2 &middot; The Funny Suite</h3>
 <p>Ten humor-forward prompts engineered to stress the same five grading dimensions. Roster expanding as new models complete the suite.</p>
 </div>
 <div class="study-hero">
 <div class="study-top">
-<span class="study-num">STUDY 002</span>
+<span class="study-num">GENGRADE 2</span><span class="study-meta" style="font-weight:800;color:#e3a82b;letter-spacing:.5px">Flux &middot; SDXL &middot; DrmShpr8 &middot; +</span>
 <span class="badge badge-v">SUITE V2</span>
 <span class="badge badge-live">IN PROGRESS</span>
 <span class="study-meta">Conducted July 2026 &middot; 3 models complete &middot; more pending</span>
@@ -267,19 +268,19 @@ footer{background:var(--char);color:#c9ccd2;padding:40px 22px 26px;border-top:4p
 <div class="sechead">
 <span class="kicker">The Record</span>
 <h3>Study Archive</h3>
-<p>Every study is frozen the day it publishes. New models, new study &mdash; grades never silently change.</p>
+<p>Every study is frozen the day it publishes &mdash; browse by date or by the model roster in each title. New models, new study; grades never silently change.</p>
 </div>
 <div class="arch">
-<div class="archcard">
-<div class="row"><h6>Study 002</h6><span class="badge badge-v">V2</span><span class="badge badge-live">IN PROGRESS</span></div>
-<div class="dt">Opened July 2026</div>
+<a class="archcard" href="#study" style="text-decoration:none;color:inherit;display:block">
+<div class="row"><h6>GenGrade 2</h6><span class="badge badge-v">V2</span><span class="badge badge-live">IN PROGRESS</span></div>
+<div class="dt">Opened July 2026 &middot; Flux &middot; SDXL &middot; DrmShpr8 &middot; +</div>
 <p>The Funny Suite. Cloudflare trio complete; Gemini, GPT Image 2, and others joining the roster.</p>
-</div>
-<div class="archcard old">
-<div class="row"><h6>Study 001</h6><span class="badge badge-v">V1</span><span class="badge badge-pub">PUBLISHED</span></div>
-<div class="dt">Conducted July 2026</div>
-<p>Baseline suite. 30 images across FLUX.1 schnell, Stable Diffusion XL, and DreamShaper 8. Complete and archived.</p>
-</div>
+</a>
+<a class="archcard old" href="study-001.html" style="text-decoration:none;color:inherit;display:block">
+<div class="row"><h6>GenGrade 1</h6><span class="badge badge-v">V1</span><span class="badge badge-pub">PUBLISHED</span></div>
+<div class="dt">Conducted July 2026 &middot; Flux &middot; SDXL &middot; DrmShpr8</div>
+<p>Baseline suite. 30 images across three models. Complete, frozen, and archived. Tap to view the full study.</p>
+</a>
 </div>
 </section>
 

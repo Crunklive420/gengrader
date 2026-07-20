@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenGrade 1 - Flux / SDXL / DrmShpr8 | GenGrader Archive</title>
+<meta name="description" content="Archived GenGrader study: the baseline Suite V1 across FLUX.1 schnell, Stable Diffusion XL, and DreamShaper 8. Frozen July 2026.">
+<style>
+:root{
+  --red:#c0281f; --red-dk:#8e1712; --gold:#e3a82b; --gold-dk:#b07f14;
+  --char:#2b2e33; --ink:#1c1e22; --body:#4a4d54; --mut:#7a7e86;
+  --off:#f7f6f3; --line:#e4e2dc;
+  --shadow-sm:0 4px 14px rgba(28,30,34,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.55}
+header{background:#fff;border-bottom:1px solid var(--line);padding:12px 22px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:60;box-shadow:0 2px 10px rgba(28,30,34,.06)}
+header a.back{font-size:12.5px;font-weight:800;color:var(--red);text-decoration:none;margin-left:auto;border:2px solid var(--red);border-radius:9px;padding:8px 14px}
+header h1{font-size:21px;font-weight:800;color:var(--char)}
+header h1 .g2{color:var(--red)}
+header .tag{display:block;font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut);border-top:2px solid var(--gold);padding-top:3px;margin-top:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 22px}
+.badge{font-size:10.5px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:99px}
+.badge-v{background:#fff;color:var(--char);border:2px solid var(--gold)}
+.badge-arch{background:#6a6e76;color:#fff}
+.mast{background:#2b2e33;border-radius:16px;color:#fff;padding:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;filter:grayscale(.35)}
+.mast .num{font-size:26px;font-weight:900;letter-spacing:1px}
+.mast .roster{font-size:13px;font-weight:800;color:#e3a82b;letter-spacing:.5px}
+.mast .meta{font-size:12.5px;color:#c9ccd2;width:100%}
+.notice{margin:18px 0 34px;background:var(--off);border:1px dashed var(--mut);border-radius:12px;padding:14px 18px;font-size:13.5px;color:var(--body)}
+.notice b{color:var(--char)}
+h3.sec{font-size:24px;font-weight:800;color:var(--char);margin:34px 0 8px}
+p.secp{color:var(--body);font-size:14.5px;margin-bottom:22px}
+.labrow{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);padding:16px;margin-bottom:16px;filter:grayscale(.5);opacity:.88;transition:filter .25s,opacity .25s}
+.labrow:hover{filter:grayscale(0);opacity:1}
+.labrow h5{font-size:16.5px;font-weight:800;color:var(--char);margin-bottom:11px;display:flex;align-items:center;gap:9px}
+.labrow h5 .pill{font-size:9.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);background:var(--off);border-radius:99px;padding:4px 10px}
+.labimgs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.labimgs a{display:block;text-decoration:none;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--off)}
+.labimgs img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.labimgs .mlbl{font-size:10.5px;font-weight:800;padding:7px 4px;text-align:center;color:var(--body)}
+.foot{border-top:4px solid var(--gold);background:var(--char);color:#c9ccd2;text-align:center;padding:26px 20px;font-size:12px;margin-top:44px}
+.foot a{color:#e6584d;text-decoration:none;font-weight:700}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+<div><h1>Gen<span class="g2">Grader</span></h1><span class="tag">AI Performance Evaluation</span></div>
+<a class="back" href="index.html">&lsaquo; BACK TO CURRENT STUDY</a>
+</header>
+
+<div class="wrap">
+<div class="mast">
+<span class="num">GENGRADE 1</span>
+<span class="badge badge-v">SUITE V1</span>
+<span class="badge badge-arch">ARCHIVED</span>
+<span class="roster">Flux &middot; SDXL &middot; DrmShpr8</span>
+<span class="meta">Conducted July 2026 &middot; 30 images &middot; Baseline suite &middot; Frozen at publication</span>
+</div>
+
+<div class="notice"><b>This study is frozen.</b> Grades and evidence reflect the models as tested in July 2026 and will never be edited. For current grades, see the <a href="index.html" style="color:#c0281f;font-weight:800">latest study</a>. Rows are shown muted &mdash; hover or tap to view in full color.</div>
+
+<h3 class="sec">The Evidence</h3>
+<p class="secp">Baseline Suite V1: ten prompts covering portraits, groups, text, logos, action, reactions, watercolor, products, spatial logic, and cinematics. Same prompt, three models. Every image is hosted on <a href="https://glipper.lovable.app" style="color:#c0281f;font-weight:700">Glipper</a> &mdash; tap to view full size.</p>
+<div id="labgrid"></div>
+</div>
+
+<div class="foot">
+GenGrade 1 &middot; Archived study &middot; &copy; 2026 GenGrader &middot; A <a href="https://glipper.lovable.app">Glipper</a> project<br>
+Generator names belong to their owners. Sample outputs shown for review and commentary.
+</div>
+
+<script>
+var GLIP="https://glipper.lovable.app";
+var CDN="https://lhksabrylczasyzyxtmn.supabase.co/storage/v1/object/public/seed-media/gengrader/";
+var LABM=[["flux","FLUX.1 schnell"],["sdxl","Stable Diffusion XL"],["dreamshaper","DreamShaper 8"]];
+var LAB=[
+{s:"portrait",n:"Portrait",ids:{flux:"03686dc2-dceb-49e5-ad65-f295bf9c3424",sdxl:"2779ae46-f7f6-4b07-92c3-1f6de6b642cb",dreamshaper:"0a4bf665-9a3c-4ba1-84ea-fb5d46d21e65"}},
+{s:"group",n:"Group Scene",ids:{flux:"5c9058a3-a12a-4d9a-a2cf-b84babcf0bfa",sdxl:"57bd762b-9cfd-44b7-baa8-f50e42519d18",dreamshaper:"a1430c4b-6d03-4817-89ed-7a10f2878ebc"}},
+{s:"poster-text",n:"Text Poster",ids:{flux:"0445e76a-567e-4c70-aade-c35a9954b6c8",sdxl:"c2821380-4888-4605-be1c-0de6710a83c1",dreamshaper:"4e09fce0-6185-462e-8a21-8780463715a6"}},
+{s:"logo",n:"Logo Design",ids:{flux:"0ce25fa0-81f2-493d-85af-06ff4bae2162",sdxl:"c4bb2756-3b57-4021-a7c5-813dbcad648e",dreamshaper:"a44bf282-eb1c-431c-9078-fc6a934e72fe"}},
+{s:"animal-action",n:"Animal Action",ids:{flux:"ef19ddb2-7455-49fe-a0d7-e62db2a9af64",sdxl:"ffa9a538-2cbe-4348-b6a7-0c6829f8d30c",dreamshaper:"5cf18771-8d21-4de1-bddf-ab9111301cb1"}},
+{s:"reaction",n:"Reaction Image",ids:{flux:"56526a9e-c901-430f-8028-c2d9d618bfda",sdxl:"34f15741-0b30-4ba5-8dae-d7b44a83a4c6",dreamshaper:"336e84da-c5f0-4400-8b10-2255907b292b"}},
+{s:"watercolor",n:"Watercolor",ids:{flux:"77770276-38d7-408c-b1f1-79a3e13d95a2",sdxl:"753b9dbb-987e-4c23-a512-7b3b281caca7",dreamshaper:"265663d0-ba84-4183-b847-2e0d2e40088e"}},
+{s:"product",n:"Product Shot",ids:{flux:"b466270a-5726-4a0f-809f-a8d460cddcae",sdxl:"d739d94f-f365-47dc-a987-cfdfe9d2ef8d",dreamshaper:"805387f5-5185-406b-9b7f-a94ec122463b"}},
+{s:"spatial",n:"Spatial Test",ids:{flux:"9e9486b6-7736-4d20-a86b-58cf7df58103",sdxl:"fe0ddfeb-c88f-4814-a669-47e4af04552e",dreamshaper:"ded8ef5b-f21c-4d0e-93f4-578d53697283"}},
+{s:"night-city",n:"Night City",ids:{flux:"67eac363-297e-4fba-82ee-c4d68149a75b",sdxl:"43eb05f4-5fce-4634-b9cb-7b9acb467346",dreamshaper:"9fb53b13-25ba-49fb-add0-db7bda19d8e4"}}
+];
+var lg=document.getElementById("labgrid");
+LAB.forEach(function(p){
+var d=document.createElement("div");d.className="labrow";
+var h='<h5>'+p.n+'<span class="pill">Suite V1</span></h5><div class="labimgs">';
+LABM.forEach(function(m){
+h+='<a href="'+GLIP+'/content/'+p.ids[m[0]]+'"><img loading="lazy" src="'+CDN+m[0]+'/'+p.s+'.png" alt="'+p.n+' generated by '+m[1]+'"><div class="mlbl">'+m[1]+'</div></a>';
+});
+d.innerHTML=h+'</div>';lg.appendChild(d);});
+</script>
+</body>
+</html>
